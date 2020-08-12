@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private http:HttpClient) { }
 
   login(model: any) {
-    debugger
+    
     return this.http.post(this.baseURL + 'GetUser', model).pipe(
       map((response: any) => {
         const user = response;
@@ -20,5 +20,10 @@ export class AuthService {
         }
       })
     );
+  }
+  register(model:any)
+  {
+
+    return this.http.post(this.baseURL+'AddUser',model)
   }
 }

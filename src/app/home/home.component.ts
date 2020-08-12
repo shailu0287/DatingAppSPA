@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+registerMode:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+registerToggel()
+{
+  return this.registerMode=true;
+}
+cancelRegisterMode(mode:boolean)
+{
+  this.registerMode=mode;
+}
 }
